@@ -1,0 +1,167 @@
+@font-face {
+    font-family: "Cairo";
+	src: url(../Cairo-Regular.ttf);
+}
+
+html{
+	font-family: "Cairo" ;
+}
+
+.body{
+	display: flex;
+	min-height: 100%;
+	justify-content: space-between;
+}
+
+/* Start main */
+div main{
+	flex:2;
+	background: url("../images/Untitled-1.jpg");
+	background-repeat: repeat-y;
+}
+
+div main .header{
+	color: #454545;
+	font-weight: 900;
+	font-size: 5rem;
+	line-height: 4rem;
+	letter-spacing: 0.1em;
+	width: 100px;
+	margin: 100px 0 30px 50px;
+}
+
+div main section{
+	border-left: 2px solid #454545;
+	width: 310px;
+	line-height: 2rem;
+	margin-left: 50px;
+}
+
+div main section h1{
+	color: #c2341c;
+	line-height: 0;
+	font-size: 1.5em;
+	margin-left: 15px;
+	padding-top: 15px;
+}	
+
+div main section p{
+	margin-left: 15px;
+	color: #454545;
+	font-weight: bold;
+}	
+
+ div main section p span{
+	 color: #c2341c;
+	 font-weight: bold;
+}	
+/* End main */
+/* Start Aside */
+aside{
+	flex:1;
+	background: url("../images/Untitled-12.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: #c2341c;
+}
+
+aside .hidden{
+	display: none;
+	font-weight: 900;
+	font-size: 5rem;
+	line-height: 4rem;
+	letter-spacing: 0.1em;
+	width: 100px;
+}
+
+aside .icons{
+	display: flex;
+	align-items: flex-end;
+	width: 50%;
+	margin: 0 auto;
+	height: 650px;
+	justify-content: space-between;
+	list-style: none;
+	padding: 0;
+}	
+
+aside .icons li a{
+	height: 30px;
+}
+
+aside .icons li a img{
+	width: 30px;
+	height: 30px;
+	margin-bottom: 50px;
+}
+/* End Aside */
+/* Max width: 1200px */
+@media screen and (max-width:1200px){
+	aside .icons{ width: 60%;}
+}
+
+/* Max width: 970px */
+@media screen and (max-width:970px){
+	aside .icons{ width: 80%;}
+}
+
+/* Max width: 730px */
+@media screen and (max-width:730px){
+	aside .icons{
+		width: 40%;
+		align-content: flex-end;
+		flex-wrap: wrap;
+	}
+	div main{ flex: 1.5; }
+}
+
+/* Max width: 620px */
+@media screen and (max-width:620px){
+	.body {flex-direction: column-reverse;}
+	div main .visible{ display: none;}
+	aside{
+		height: 280px;
+		background-size: 30%;
+	}
+	aside .icons{
+		align-content: center;
+		height: 50px;
+		width: 85% ;
+		padding-top: 40px;
+		padding-right: 35px;
+	}
+	aside .hidden{
+		color: #ece2e0;
+		display: block;
+		position: relative;
+		top: 0;
+		left: 35%;
+		width: 80%;
+	}
+}
+
+/* Max width: 447px */
+@media screen and (max-width:447px){
+	div main .visible{
+		display: block;
+		font-size: 4em;
+		margin-top: 30px;
+		margin-left: 20px ;
+	}
+	div main section{
+		margin-left: 20px;
+		width: 280px;
+	}
+	div main section h1{font-size: 1em}
+	div main section p{font-size: 0.7em}
+	aside .hidden{display: none}
+	aside{ background-size: 40%;}
+	aside .icons{
+		height: 220px;
+		padding-top: 60px;
+		padding-right: 0;
+	}
+	aside .icons li a img{
+		margin-bottom: 10px;
+	}
+}
